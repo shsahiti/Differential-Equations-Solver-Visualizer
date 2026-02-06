@@ -1,0 +1,25 @@
+#include "exprtk.hpp"
+#include "parsing.hpp"
+#include <string>
+#include <iostream>
+
+void seprable_input(const std::string &function){
+
+    double x = 0;
+    double y = 0;
+
+    exprtk::symbol_table<double> symbol_table;
+    symbol_table.add_variable("x", x);
+    symbol_table.add_variable("y", y);
+    symbol_table.add_constants();
+    
+
+    exprtk::expression<double> expression;
+    expression.register_symbol_table(symbol_table);
+
+    exprtk::parser<double> parser;
+    
+    if (!parser.compile(function, expression)){
+        std::cerr << "parse error!\n";
+    }
+}
