@@ -2,6 +2,7 @@
 #include <cmath>
 #include <iostream>
 #include "parsing.hpp"
+#include <utility>
 
 double h_approx_order_1(std::pair<double, double> initial_vals, double estimate_point, double h){
     double y_n = initial_vals.second;
@@ -49,7 +50,7 @@ int main(){
     double h = 0;
     double eval_point = 0;
     std::cout << "dy/dx = ";
-    std::cin >> function;
+    std::getline(std::cin, function);
     std::cout << "input your initial x";
     std::cin >> initial_vals.first;
     std::cout << "input your initial y";
@@ -63,6 +64,7 @@ int main(){
 
     seprable_input(function);
     std::cout << h_approx_order_1(initial_vals,eval_point,h);
+    
 
 
     return 0;
