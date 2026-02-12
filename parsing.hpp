@@ -1,4 +1,6 @@
+#pragma once
+#include <string>
+#include <iostream>
 
-#include "exprtk.hpp"
 void seprable_input(const std::string& function);
 double eval_function(double x, double y);
