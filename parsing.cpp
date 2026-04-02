@@ -1,7 +1,7 @@
 #include "parsing.hpp"
 #include "exprtk.hpp"
 
-   static double x;
+    static double x;
     static double y;
     static exprtk::symbol_table<double> symbol_table;
     static exprtk::expression<double> expression;

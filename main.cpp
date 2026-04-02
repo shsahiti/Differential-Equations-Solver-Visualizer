@@ -1,5 +1,6 @@
 #include "solving.hpp"
 #include "parsing.hpp"
+#include <iomanip>
 
 int main(){
     std::string function = "";
@@ -20,7 +21,7 @@ int main(){
     
 
     seprable_input(function);
-    std::cout << h_approx_order_1(initial_vals,eval_point,h);
+    std::cout << std::setprecision(15) << h_approx_order_1(initial_vals,eval_point,h);
     
 
 

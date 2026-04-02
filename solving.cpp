@@ -10,11 +10,11 @@ double h_approx_order_1(std::pair<double, double> initial_vals, double estimate_
     double y_n1 = 0;
     double x_n1 = initial_vals.first;
 
-     while (x_n1 <= estimate_point) {
+     while (x_n1 < estimate_point - 1e-10) {
          k1 = eval_function(x_n1, y_n);
          k2 = eval_function(x_n1 + h/2 , y_n + (h/2)*k1);
          k3 = eval_function(x_n1 + h/2 , y_n + (h/2)*k2);
-         k4 = eval_function(x_n1 + h, y_n1 + h*k3);
+         k4 = eval_function(x_n1 + h, y_n + h*k3);
          y_n1 = y_n + (h/6)*(k1 + 2*k2 + 2*k3 + k4);
          x_n1 += h;
          y_n = y_n1;
