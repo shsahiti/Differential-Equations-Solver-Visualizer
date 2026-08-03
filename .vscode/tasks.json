@@ -10,7 +10,7 @@
                 "/std:c++17",
                 "/bigobj",
                 "/EHsc",
-                "/Iinclude",
+                "/I.",
                 "main.cpp",
                 "parsing.cpp",
                 "solving.cpp",
